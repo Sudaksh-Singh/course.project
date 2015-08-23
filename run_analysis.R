@@ -51,4 +51,4 @@ X_tidy<-aggregate(x = X_subset_labelled[,-c(1,2)],
                   by = list(Subject_ID=X_subset_labelled$Subject_ID,
                             Activity_labels=X_subset_labelled$Activity_labels),FUN = mean)
 
-write.csv(X_tidy,"tidy_dataset.txt",row.names=F)
+write.table(X_tidy,"tidy_dataset.txt",row.names=F)
